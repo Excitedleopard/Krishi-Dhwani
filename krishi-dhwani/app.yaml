@@ -1,0 +1,13 @@
+# Krishi Dhwani — Databricks Apps configuration
+# Docs: https://docs.databricks.com/en/dev-tools/databricks-apps/index.html
+
+command: ["python", "app.py"]
+
+env:
+  # Optional: override LLM endpoint name if needed
+  - name: LLM_ENDPOINT
+    value: "databricks-llama-4-maverick"
+
+  # Add this section to your app.yaml
+volumes:
+  - volume_path: /Volumes/krishi_dhwani/silver/faiss_index
